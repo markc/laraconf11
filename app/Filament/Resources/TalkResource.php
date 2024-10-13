@@ -2,21 +2,26 @@
 
 namespace App\Filament\Resources;
 
+use Str;
+use Filament\Forms;
+use App\Models\Talk;
+use Filament\Tables;
+use Filament\Forms\Form;
 use App\Enums\TalkLength;
 use App\Enums\TalkStatus;
-use App\Filament\Resources\TalkResource\Pages;
-use App\Filament\Resources\TalkResource\RelationManagers;
-use App\Models\Talk;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Notifications\Notification;
-use Filament\Resources\Resource;
-use Filament\Tables;
 use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Notifications\Notification;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Filters\SelectFilter;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Filters\TernaryFilter;
 use Illuminate\Database\Eloquent\Collection;
+use App\Filament\Resources\TalkResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Str;
+use App\Filament\Resources\TalkResource\RelationManagers;
 
 class TalkResource extends Resource
 {

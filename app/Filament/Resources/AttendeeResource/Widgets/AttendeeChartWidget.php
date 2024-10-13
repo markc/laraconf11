@@ -44,22 +44,22 @@ class AttendeeChartWidget extends ChartWidget
         $query = $this->getPageTableQuery();
         $query->getQuery()->orders = [];
 
-        match ($filter) {
-            'week' => $data = Trend::query($query)
+        $data = match ($filter) {
+            'week' => Trend::query($query)
                 ->between(
                     start: now()->subWeek(),
                     end: now(),
                 )
                 ->perDay()
                 ->count(),
-            'month' => $data = Trend::query($query)
+            'month' => Trend::query($query)
                 ->between(
                     start: now()->subMonth(),
                     end: now(),
                 )
                 ->perDay()
                 ->count(),
-            '3months' => $data = Trend::query($query)
+            '3months' => Trend::query($query)
                 ->between(
                     start: now()->subMonths(3),
                     end: now(),

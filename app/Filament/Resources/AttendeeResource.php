@@ -2,20 +2,25 @@
 
 namespace App\Filament\Resources;
 
+use Filament\Forms;
+use Filament\Tables;
+use App\Models\Attendee;
+use Filament\Forms\Form;
+use Filament\Tables\Table;
+use Filament\Resources\Resource;
+use Awcodes\Shout\Components\Shout;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Components\TextInput;
+use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\AttendeeResource\Pages;
+use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\AttendeeResource\RelationManagers;
 use App\Filament\Resources\AttendeeResource\Widgets\AttendeeChartWidget;
 use App\Filament\Resources\AttendeeResource\Widgets\AttendeesStatsWidget;
-use App\Models\Attendee;
-use Awcodes\Shout\Components\Shout;
-use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\Resource;
-use Filament\Tables;
-use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class AttendeeResource extends Resource
 {

@@ -3,14 +3,15 @@
 namespace App\Models;
 
 use App\Enums\Region;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
-use Filament\Forms\Components\TextInput;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Models\Conference;
 use Spatie\MediaLibrary\HasMedia;
+use Filament\Forms\Components\Select;
+use Illuminate\Database\Eloquent\Model;
+use Filament\Forms\Components\TextInput;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Filament\Forms\Components\SpatieMediaLibraryFileUpload;
 
 class Venue extends Model implements HasMedia
 {
