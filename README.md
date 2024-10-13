@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="100" alt="Laravel Logo"></a></p>
 
 ## About Laraconf 11
 
@@ -6,28 +6,29 @@ This repository is a fork of [iAmKevinMcKee/laraconf](https://github.com/iAmKevi
 
 ## Usage
 
-This section will be updated with tested instructions.
+This section will be updated with tested instructions using Bash. The idea is to be able to
+copy and paste the below into a Bash shell and immediately login to a working project.
 
 ```
-# optional conveniance aliases
+# optional convenience aliases
 alias pa='php artisan'
 alias sd='sqlite3 database/database.sqlite'
 
-cd ~/Dev # or your preferred development directory
+[ ! -d ~/Dev ] && mkdir ~/Dev
+cd ~/Dev
 git clone https://github.com/markc/laraconf11.git
 cd laraconf11
-cp .env.example .env # update DB_* entries, default to sqlite
+cp .env.example .env # update DB_* entries, defaults to sqlite
+touch database/database.sqlite
 composer install
 npm install
-touch database/database.sqlite
 pa key:generate
 pa storage:link
 pa migrate
 pa migrate:fresh --seed
 npm run build # or 'dev' in another shell
 pa serve
-# login as me@example.com w/ password
-# Additional or modified steps to be added as testing progresses
+echo -e "\nLogin as me@example.com using 'password'\n"
 ```
 
 ## Contributing
