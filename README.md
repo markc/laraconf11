@@ -27,8 +27,8 @@ pa storage:link
 pa migrate
 pa migrate:fresh --seed
 npm run build # or 'dev' in another shell
-pa serve
 echo -e "\nLogin as me@example.com using 'password'\n"
+pa serve
 ```
 
 ## Contributing
