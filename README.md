@@ -1,25 +1,21 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200" alt="Laravel Logo"></a></p>
 
 ## About Laraconf 11
 
-This repo is forked from [iAmKevinMcKee/laraconf](https://github.com/iAmKevinMcKee/laraconf)
-and manually updated to Laravel 11 mainly as a learning challenge. I was following along
-with the Laracasts tutorial at [Rapid Laravel Apps With Filament](https://laracasts.com/series/rapid-laravel-development-with-filament/) (paywalled) but after Episode 5 I could not
-get the project to work so I figured I may as well fork the completed Laravel 10 project and see if I could convert it to Laravel 11. With a lot of help from Claude/Cline I managed to
-get it most of it running and will keep pushing updates as I finished the tutorial.
+This repository is a fork of [iAmKevinMcKee/laraconf](https://github.com/iAmKevinMcKee/laraconf), updated to Laravel 11 as a learning exercise. It's based on the Laracasts tutorial [Rapid Laravel Apps With Filament](https://laracasts.com/series/rapid-laravel-development-with-filament/). After encountering issues with the course using Laravel 11, I decided to fork the completed Laravel 10 project repo and upgrade it to Laravel 11. With assistance from AI tools, I've managed to get most features working and will continue to update the project as I progress through the tutorial.
 
 ## Usage
 
-I will try to keep this section update and tested.
+This section will be updated with tested instructions.
 
 ```
-cd ~/Dev # or wherever you develop projects in your home directory
+cd ~/Dev # or your preferred development directory
 git clone https://github.com/markc/laraconf11.git
 cd laraconf11
 cp .env.example .env # update DB_* entries, default to sqlite
 composer install
 npm install
-# more to come as I actually test a Github clone
+# Additional steps to be added as testing progresses
 ```
 
 ## Contributing
