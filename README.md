@@ -9,13 +9,25 @@ This repository is a fork of [iAmKevinMcKee/laraconf](https://github.com/iAmKevi
 This section will be updated with tested instructions.
 
 ```
+# optional conveniance aliases
+alias pa='php artisan'
+alias sd='sqlite3 database/database.sqlite'
+
 cd ~/Dev # or your preferred development directory
 git clone https://github.com/markc/laraconf11.git
 cd laraconf11
 cp .env.example .env # update DB_* entries, default to sqlite
 composer install
 npm install
-# Additional steps to be added as testing progresses
+touch database/database.sqlite
+pa key:generate
+pa storage:link
+pa migrate
+pa migrate:fresh --seed
+npm run build # or 'dev' in another shell
+pa serve
+# login as me@example.com w/ password
+# Additional or modified steps to be added as testing progresses
 ```
 
 ## Contributing
