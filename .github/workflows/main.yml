@@ -1,4 +1,4 @@
-name: Deploy Tomato App
+name: Deploy Laraconf 11 App
 on:
   push:
     branches:
@@ -50,5 +50,3 @@ jobs:
           cd /home/u/netserva.net/var/www
           php artisan migrate --force
           php artisan optimize
-
-# This is a small change to trigger GitHub to recognize the file
