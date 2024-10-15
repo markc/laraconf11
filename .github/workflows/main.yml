@@ -38,6 +38,7 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
+        REMOTE_PORT: ${{ secrets.VPS_PORT }}
         TARGET: "/home/u/netserva.net/var/www"
 
     - name: Run Remote/Artisan Commands
@@ -45,6 +46,7 @@ jobs:
       with:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
+        port: ${{ secrets.VPS_PORT }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
           cd /home/u/netserva.net/var/www
