@@ -44,10 +44,10 @@ jobs:
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
       with:
-        host: ${{ secrets.VPS_HOST }}
-        username: ${{ secrets.VPS_USER }}
-        port: ${{ secrets.VPS_PORT }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        host: ${{ secrets.VPS_HOST }}
+        port: ${{ secrets.VPS_PORT }}
+        username: ${{ secrets.VPS_USER }}
         script: |
           cd /home/u/netserva.net/var/www
           php artisan migrate --force
