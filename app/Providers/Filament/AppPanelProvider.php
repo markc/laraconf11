@@ -27,6 +27,7 @@ class AppPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+            ->brandName('Netserva NET')
             ->default()
             ->id('app')
             ->path('/')
@@ -34,7 +35,6 @@ class AppPanelProvider extends PanelProvider
             ->registration()
             ->passwordReset()
             ->emailVerification()
-            ->brandName('My Great Company')
             ->colors([
                 'primary' => Color::Indigo,
                 'gray' => Color::Slate,
@@ -77,6 +77,6 @@ class AppPanelProvider extends PanelProvider
     public function register(): void
     {
         parent::register();
-        FilamentView::registerRenderHook('panels::body.end', fn(): string => Blade::render("@vite('resources/js/app.js')"));
+        FilamentView::registerRenderHook('panels::body.end', fn (): string => Blade::render("@vite('resources/js/app.js')"));
     }
 }
