@@ -20,7 +20,7 @@ class ConferenceResource extends Resource
 {
     protected static ?string $model = Conference::class;
 
-//    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    //    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationGroup = 'First Group';
 
     protected static ?string $recordTitleAttribute = 'name';
@@ -36,8 +36,10 @@ class ConferenceResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
+                    ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('start_date')
                     ->dateTime()
